@@ -8,6 +8,9 @@ var usersRouter = require('./routes/users');
 var apiRoute = require('./routes/api')
 
 var app = express();
+app.listen(3000, () => {
+    console.log('Server started on port 3000');
+});
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -20,4 +23,4 @@ app.use('/users', usersRouter);
 app.use('/API', apiRoute); //api para usar el dialogflow, por el momento basico
 
 
-module.exports = app;
+//module.exports = app;

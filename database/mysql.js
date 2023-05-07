@@ -14,7 +14,7 @@ const credenciales2 = {
     database: 'u300302440_turismo'
 };
 
-const connection = mysql.createConnection(credenciales1);
+const connection = mysql.createConnection(credenciales2);
 /*.then(res => {
     console.log("base de datos conectada");
     res.execute(`SELECT table_name, column_name, data_type 
