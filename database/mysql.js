@@ -14,25 +14,10 @@ const credenciales2 = {
     database: 'u300302440_turismo'
 };
 
-const connection = mysql.createConnection(credenciales2);
-/*.then(res => {
-    console.log("base de datos conectada");
-    res.execute(`SELECT table_name, column_name, data_type 
-                 FROM information_schema.columns 
-                 WHERE table_schema = '${credenciales.database}'
-                 ORDER BY table_name;`)
-        .then(([rows, fields]) => {
-            const result = {};
-            rows.forEach(row => {
-                if (!result[row.table_name]) {
-                    result[row.table_name] = {};
-                }
-                result[row.table_name][row.column_name] = row.data_type;
-            });
-            console.dir(result);
-        });
-    module.exports = res;
-});*/
+const connection = mysql.createConnection(credenciales2)
+//.then(res => {
+//    console.log("base de datos conectada");
+//});
 
 /*connection.connect((err)=>{
     if (err) throw err;

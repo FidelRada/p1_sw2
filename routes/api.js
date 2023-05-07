@@ -46,7 +46,7 @@ router.get('/mensaje', async function (req, res, next) {
 				case "solicitar_servicio":
 					let destino = respuesta.parameters.destino.stringValue;
 					//console.log(destino);
-					(await mysql).query(`SELECT * FROM paquete WHERE destino = '${destino}'`)
+					(await mysql).execute(`SELECT * FROM paquete WHERE destino = '${destino}'`)
 						.then(([rows, fields]) => {
 							//console.log(rows);
 							respuesta.paquetes = rows;
