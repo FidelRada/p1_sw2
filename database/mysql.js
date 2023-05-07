@@ -15,13 +15,12 @@ const credenciales2 = {
 };
 
 const connection = mysql.createConnection(credenciales2)
-//.then(res => {
-//    console.log("base de datos conectada");
-//});
+.then(res => {
+    console.log("base de datos conectada");
+    module.exports = res;//connection;
+});
 
 /*connection.connect((err)=>{
     if (err) throw err;
     console.log("Base de datos connectada");
 });*/
-
-module.exports = connection;
